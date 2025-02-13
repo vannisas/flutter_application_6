@@ -20,15 +20,27 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Virtual Pet'),
+        title: const Text('Virtual Pet Simulator'),
+        backgroundColor: Colors.pink[100],
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            _navigateToNextPage(context);
-          },
-          child: const Text("Start!"),
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SizedBox(
+            height: 50,
+            child: Text("Welcome to the virtual pet simulator!", 
+          style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600, color: const Color.fromARGB(255, 248, 148, 181)),
+            ),
+          ),
+          Center(
+            child:  ElevatedButton(
+              onPressed: () {
+                _navigateToNextPage(context);
+              },
+              child: Text("Start", style: TextStyle(color: Colors.pink[200])),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -42,6 +54,7 @@ class SelectionScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Virtual Pet'),
+        backgroundColor: Colors.pink[100],
       ),
       body: const Center(
         child: Text(
