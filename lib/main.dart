@@ -27,7 +27,7 @@ class HomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
-            height: 50,
+            height: 60,
             child: Text("Welcome to the virtual pet simulator!", 
           style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600, color: const Color.fromARGB(255, 248, 148, 181)),
             ),
@@ -37,6 +37,9 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 _navigateToNextPage(context);
               },
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+              ),
               child: Text("Start", style: TextStyle(color: Colors.pink[200])),
             ),
           ),
