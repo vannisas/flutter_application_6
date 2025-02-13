@@ -56,13 +56,13 @@ class SelectionScreen extends StatelessWidget {
         title: const Text('Virtual Pet'),
         backgroundColor: Colors.pink[100],
       ),
-      body: const Center(
-        child: Text(
-          "DOG GO HERE",
-          style: TextStyle(fontSize: 18),
+      body: Center(
+        child: 
+        Image.asset('puppy.png',
+        height: 400,
+        width: 400),
         ),
-      ),
-    );
+      );
   }
 }
 
