@@ -59,8 +59,8 @@ class SelectionScreen extends StatelessWidget {
       body: Center(
         child: 
         Image.asset('puppy.png',
-        height: 400,
-        width: 400),
+        height: 370,
+        width: 370),
         ),
       );
   }
