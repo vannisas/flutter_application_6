@@ -20,15 +20,30 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Virtual Pet'),
+        title: const Text('Virtual Pet Simulator'),
+        backgroundColor: Colors.pink[100],
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            _navigateToNextPage(context);
-          },
-          child: const Text("Start!"),
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SizedBox(
+            height: 60,
+            child: Text("Welcome to the virtual pet simulator!", 
+          style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600, color: const Color.fromARGB(255, 248, 148, 181)),
+            ),
+          ),
+          Center(
+            child:  ElevatedButton(
+              onPressed: () {
+                _navigateToNextPage(context);
+              },
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+              ),
+              child: Text("Start", style: TextStyle(color: Colors.pink[200])),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -43,7 +58,9 @@ class SelectionScreen extends StatelessWidget {
       backgroundColor: Colors.white, 
       appBar: AppBar(
         title: const Text('Virtual Pet'),
+        backgroundColor: Colors.pink[100],
       ),
+
       body: Stack(
         children: [
           Center(
@@ -60,6 +77,14 @@ class SelectionScreen extends StatelessWidget {
         ],
       ),
     );
+      body: Center(
+        child: 
+        Image.asset('puppy.png',
+        height: 370,
+        width: 370),
+        ),
+      );
+
   }
 
   Widget _buildPositionedImage(String imagePath, double width, double height, double topPadding, double leftPadding, Alignment alignment) {
